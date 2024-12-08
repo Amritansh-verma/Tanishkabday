@@ -3,55 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <title>Welcome</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6e6e6, #ffcccc); /* Updated gradient for a soft feel */
             text-align: center;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            color: #fff;
+            color: #444;
         }
         h1 {
-            margin-top: 20%;
-            font-size: 2.5rem;
-            animation: fadeIn 2s;
+            margin-top: 50px;
+            color: #ff6666;
         }
-        .button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            background: #ff4b5c;
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+            border-radius: 50%;
+            border: 3px solid #ff6666;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            background: #ff6666;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            animation: pop 1.5s infinite;
-        }
-        .message {
-            display: none;
-            font-size: 1.5rem;
             margin-top: 20px;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes pop {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        button:hover {
+            background: #ff4d4d;
         }
     </style>
 </head>
 <body>
-    <h1>Happy Birthday to the Most Beautiful Girl!</h1>
-    <button class="button" onclick="showMessage()">Click to Reveal 🎉</button>
-    <div class="message">You're not just special, you're the reason hearts race. 💕</div>
-
-    <script>
-        function showMessage() {
-            document.querySelector('.message').style.display = 'block';
-        }
-    </script>
+    <h1>Happy Birthday 🎉</h1>
+    <img src="placeholder.jpg" alt="Her Image"> 
+    <p>Tap the button to explore your surprise!</p>
+    <button onclick="window.location.href='timeline.html'">See Miror</button>
 </body>
 </html>
