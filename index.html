@@ -3,112 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Gorgeous!</title>
+    <title>Happy Birthday!</title>
     <style>
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ffc1cc, #ffecb3);
-            color: #333;
-            overflow-x: hidden;
-        }
-        .container {
+            font-family: Arial, sans-serif;
             text-align: center;
-            padding: 20px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #fff;
         }
         h1 {
-            font-size: 3rem;
-            color: #e91e63;
-            margin-top: 50px;
-        }
-        h2 {
-            font-size: 1.5rem;
-            color: #ff4081;
+            margin-top: 20%;
+            font-size: 2.5rem;
+            animation: fadeIn 2s;
         }
         .button {
             margin-top: 20px;
-            padding: 15px 30px;
+            padding: 10px 20px;
             font-size: 1.2rem;
-            background-color: #e91e63;
-            color: #fff;
+            background: #ff4b5c;
+            color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            animation: pop 1.5s infinite;
         }
-        .button:hover {
-            background-color: #d81b60;
-        }
-        .gift-box {
-            margin: 50px auto;
-            width: 150px;
-            height: 150px;
-            background-color: #ff5252;
-            border-radius: 20px;
-            position: relative;
-            animation: bounce 2s infinite;
-        }
-        .gift-box:before {
-            content: "";
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            width: 20px;
-            height: 40px;
-            background-color: #fff;
-            transform: translateX(-50%);
-            border-radius: 10px;
-        }
-        .gift-message {
+        .message {
             display: none;
             font-size: 1.5rem;
-            color: #ff4081;
             margin-top: 20px;
         }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-15px);
-            }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        footer {
-            margin-top: 50px;
-            font-size: 1rem;
-            color: #444;
+        @keyframes pop {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Happy Birthday, Gorgeous!</h1>
-        <h2>A day to celebrate the most beautiful girl ever!</h2>
-        <div class="gift-box" onclick="openGift()"></div>
-        <p class="gift-message">Surprise! You're one in a million! 💖</p>
-        <button class="button" onclick="showConfetti()">Click to Start the Celebration 🎉</button>
-    </div>
-
-    <footer>&copy; 2024 | Made with ❤️ just for you</footer>
+    <h1>Happy Birthday to the Most Beautiful Girl!</h1>
+    <button class="button" onclick="showMessage()">Click to Reveal 🎉</button>
+    <div class="message">You're not just special, you're the reason hearts race. 💕</div>
 
     <script>
-        function openGift() {
-            const giftMessage = document.querySelector('.gift-message');
-            giftMessage.style.display = 'block';
-        }
-
-        function showConfetti() {
-            const confetti = document.createElement('div');
-            confetti.style.position = 'fixed';
-            confetti.style.top = 0;
-            confetti.style.left = 0;
-            confetti.style.width = '100%';
-            confetti.style.height = '100%';
-            confetti.style.pointerEvents = 'none';
-            confetti.style.background = 'url(https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif)';
-            confetti.style.backgroundSize = 'cover';
-            document.body.appendChild(confetti);
-            setTimeout(() => document.body.removeChild(confetti), 3000);
+        function showMessage() {
+            document.querySelector('.message').style.display = 'block';
         }
     </script>
 </body>
